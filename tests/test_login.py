@@ -1,6 +1,6 @@
-from pages.base_page import BasePage
+from pages.login_page import LoginPage
 
-class TestLogin():
+class TestLogin:
     def test_login(self):
-        bp=BasePage()
-        bp.support_login()
+        lp=LoginPage()
+        lp.perform_login()
