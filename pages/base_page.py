@@ -9,6 +9,7 @@ class BasePage:
 
     def __init__(self):
         self.url='https://www.dell.com/support/home/en-in'
+        self.name = 'SRIRAM'
 
     def open_site(self):
         o = ChromeOptions()
