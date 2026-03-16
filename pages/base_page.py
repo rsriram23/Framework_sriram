@@ -1,7 +1,12 @@
 
-from selenium import webdriver
+
 from selenium.webdriver.common.by import By
+
 from selenium.webdriver.support.wait import WebDriverWait
+
+from selenium.webdriver import Chrome,ChromeOptions
+
+
 
 
 class BasePage:
@@ -10,7 +15,7 @@ class BasePage:
         self.url='https://www.dell.com/support/home/en-in'
 
     def open_site(self):
-        o = webdriver.ChromeOptions()
+        o = ChromeOptions()
         o.add_experimental_option('detach', True)
-        self.d = webdriver.Chrome(o)
+        self.d = Chrome(o)
         self.d.get(self.url)
