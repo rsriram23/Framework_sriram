@@ -18,20 +18,22 @@ class SupportPage(BasePage):
         button=self.d.find_element('id', 'btnSubmit')
         self.d.execute_script('arguments[0].click()',button)
         sleep(10)
-        print('srirama, url is: ',self.d.current_url)
         urlc=self.d.current_url
         self.d.close()
         return urlc
 
     def search_rasr_document(self):
         #search textbox - mh-search-input
-        sleep(10)
+        # sleep(30)
         # self.d.back()
         self.search_box.clear()
         self.search_box.send_keys("RASR")
 
+        # sleep(20)
         button = self.d.find_element('id', 'btnSubmit')
         self.d.execute_script('arguments[0].click()', button)
-        sleep(10)
-        print('****\n**** srirama, url is: ',self.d.current_url,'****\n****')
-        return self.d.current_url
+
+        sleep(40)
+        urlcurrent=self.d.current_url
+        self.d.close()
+        return urlcurrent
