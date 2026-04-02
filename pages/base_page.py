@@ -15,3 +15,6 @@ class BasePage:
         self.d = webdriver.Chrome(o)
         self.wait_obj=WebDriverWait(self.d,30)
         self.d.get(self.url)
+
+    def close_site(self):
+        self.d.close()
