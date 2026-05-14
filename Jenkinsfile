@@ -22,7 +22,8 @@ pipeline {
                 bat '''
                 call venv\\Scripts\\activate
                 pip install --upgrade pip
-                pip install pytest==7.4.3
+                pip install selenium==4.41.0
+				pip install pytest==7.4.3
 				pip install openpyxl==3.1.2
                 '''
             }
